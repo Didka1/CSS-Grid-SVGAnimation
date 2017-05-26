@@ -1,0 +1,421 @@
+/* Border box declaration */ 
+html {
+box-sizing: border-box;
+}     
+ *,
+ *:before,
+ *:after {
+box-sizing: inherit;
+}
+body{
+font-family: 'Lateef', cursive;
+font-size: 1.6em;    
+}
+div img {
+width: 100%;
+max-width: 16em;   
+}
+
+
+/*filter and transition */
+.pictures{
+transition: filter 2s, border 3s, border-radius 3s;     
+}
+.pictures:hover{
+filter:sepia(1)drop-shadow(0px 0px 28px rgba(144,100,100,.8));
+border:3px solid #906464;
+border-radius: 3em;    
+}
+.housepicture{
+    
+}
+
+/* my grid */
+.container{
+display: grid; 
+grid-template-columns: repeat(3, 1fr);
+grid-template-columns: 25% 75%;    
+}
+header {
+grid-row-start:1;
+grid-column: 1/3;    
+background: url(pictures/candle.jpg) no-repeat;
+}
+header a {
+text-decoration: none;
+color: white;
+background-color: #E0CAA5;
+opacity: 0.8;
+filter: alpha(opacity=60);
+border-radius: 0.313em; 
+margin: 1em;
+}
+/*navigation styles */
+nav{
+grid-row-start:2;
+grid-column: 1/3;      
+}
+
+/* use straight Flexbox to layout an appropriate element */
+nav ul{
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;     
+background-color:#D4AB66;
+font-family: 'Merienda', cursive;
+font-size: 0.8em;    
+margin: 0em; 
+}
+nav li{    
+list-style-type: none;
+padding: 1em;
+transition:transform 2s;    
+}
+/* transform */
+nav li:hover{
+transform:scale(1.2) skew(5deg);
+}
+nav a {
+text-decoration: none;
+background-color: #E0CAA5;
+color: white;
+border-radius: 0.375em;
+padding:0 0.188em 0em 0.188em;        
+}
+nav a:hover{
+color: black;
+}
+/*sidebar styles*/
+aside{
+grid-column-start: 1; 
+grid-row:3/6; 
+background-color: #E0CAA5;
+padding: 0 1em;    
+}
+aside ul{
+padding-left: 0em; 
+padding-bottom: 0.5em;      
+}
+aside li{
+list-style-type: none;
+margin-bottom: 1em;     
+background-color: #D4AB66;    
+}
+/*transitions*/
+aside a{
+text-decoration: none;
+padding-left: 0.5em;    
+color: black;
+transition: opacity 2s, color 2s    
+}
+aside a:hover{
+color: white;    
+opacity: 0.5;    
+}
+/* main content*/
+.mainpart{ 
+display: grid;
+grid-column: 2/3;    
+grid-row:3/4;     
+grid-column-gap:1em;
+align-self: stretch;     
+}
+.mainpart2{
+display: grid;
+grid-column: 2/3;    
+grid-row:4/5;
+grid-column-gap:1em;
+grid-row-gap: 0.5em;
+align-self: stretch;     
+}
+.item1{
+grid-column-start: 2; 
+grid-row:3/4; 
+}
+.item2{
+grid-column-start: 3; 
+grid-row:3/4;  
+}
+.item3{
+grid-column-start: 2; 
+grid-row:4/5;     
+}
+.item4{
+grid-column-start: 3; 
+grid-row:4/5;     
+}
+footer{
+grid-row-start:6;
+grid-column: 1/3;    
+background-color:#D4AB66;
+font-family: 'Merienda', cursive;
+font-size: 0.9em;      
+}
+/* use straight Flexbox to layout an appropriate element */   
+footer p { 
+display: flex;
+flex-direction: column;
+flex-flow: row wrap;    
+justify-content:center;  
+}
+/* my grid system */
+
+@media (max-width: 702px) {
+.container{ 
+display: grid;
+grid-template-columns: 100%;    
+margin: 0 auto; 
+text-align: justify;    
+}    
+header {    
+background: url(pictures/candle780.jpg) no-repeat; 
+}
+header h1 {
+padding: 0.3em;
+font-size: 1em
+}
+nav{
+grid-row-start:2;
+grid-column: 1/3;      
+}    
+nav ul{ 
+display: grid;   
+background-color:#D4AB66;
+font-family: 'Merienda', cursive;
+font-size: 0.7em;    
+margin: 0em; 
+}
+ /* use straight Flexbox to layout an appropriate element */       
+nav li{
+display: flex;
+flex-direction: column;   
+}
+.mainpart{ 
+grid-column: 1/3;    
+grid-row:3/4;     
+align-self: stretch;     
+}
+.mainpart2{
+grid-column:1/3;   
+grid-row:4/5;
+grid-row-gap: 0.5em;
+align-self: stretch;     
+} 
+/*grid reordering with media queries*/   
+.item1{
+grid-column-start: 1; 
+grid-row:3/4;    
+}
+.item2{
+grid-column-start: 1; 
+grid-row:4/5;  
+}
+.item3{
+grid-column-start: 1; 
+grid-row:5/6;     
+}
+.item4{
+grid-column-start: 1; 
+grid-row:6/7;     
+}    
+aside{
+grid-column-start: 1; 
+grid-row:7/8;   
+}
+/*form */
+.formcontainer{
+display: grid;
+grid-column:1/3;
+grid-row:3/5;    
+align-content: center;
+    }
+form{    
+grid-column:1/3;
+grid-row:3/4;
+     
+}   
+div .housepicture{     
+grid-column:1/3;
+grid-row:4/5;   
+} 
+    
+div.mysvg{
+display: grid;  
+grid-column-start: 1;   
+grid-row:3/4;            
+}
+div.svg{
+grid-column-start: 1; 
+grid-row:3/4;        
+}  
+    
+        
+footer{
+grid-column: 1/3;
+grid-row-start:8;
+font-size: 0.7em;       
+}
+ /* use straight Flexbox to layout an appropriate element */   
+footer p{ 
+display: flex;
+flex-direction: column;
+flex-flow: row wrap;    
+justify-content:center;  
+}
+}
+
+/* form styles */
+.formcontainer{
+display: grid;
+grid-column: 1/3;    
+grid-row:3/4;     
+grid-column-gap:2em;
+grid-row-gap:1em;    
+align-self: stretch;
+font-size: 1.2em;     
+}
+form{    
+grid-column-start: 1;    
+grid-row:3/4;   
+}
+/*filter and transition */
+.housepicture{    
+grid-column-start:2;
+grid-row:3/4; 
+transition: filter 5s;   
+}
+.housepicture:hover{
+filter:saturate(6);     
+}
+/* transitions */
+.yourname{
+width: 30%;
+border-radius: 0.9em;
+font-size: 1em;    
+transition: width 1s, background-color 6s;       
+}
+.yourname:hover{
+width: 35%;
+background-color: #FFB757;    
+}
+/* transitions */
+.yourbook{
+width: 50%;
+transition: width 1s, background-color 6s, height 1s,background-color 3s, transform 3s  ;   
+}
+/*transform*/
+.yourbook:hover{
+width: 60%;
+height: 10%;
+border-radius: 1em;    
+background-color: #FFB757;  
+transform:skewX(10deg) translate(30px, 15px);
+}
+
+/* transitions */
+.button{
+font-size: 1em;
+padding: 0.5em;
+background-color: #FFB757;
+border: #FFB757;    
+transition:background-color 6s, border-radius 3s;     
+}
+.button:hover{
+background-color: #3AACAC;
+border-radius: 1em;    
+}
+
+
+/* SVG */
+.mysvg{
+display: grid;  
+grid-column:2/3;
+grid-row:3/4;           
+}
+svg{ 
+width: 100%;    
+}
+.information{
+font-family: 'Merienda', cursive;
+font-size: 0.7em; 
+color:#021262;
+margin-left: 5%;    
+}
+/* animation */
+.newcolor{
+animation-name: flowers;
+animation-iteration-count: infinite;  
+animation-duration: 5s;    
+animation-delay: 3s; 
+animation-direction:alternate;    
+
+}
+.newcolor1{
+animation-name: flowers1;
+animation-iteration-count: infinite;
+animation-duration: 5s;    
+animation-delay: 3s;
+animation-direction:alternate;    
+}
+
+.newcolor2{
+animation-name:flowerscenter;
+animation-iteration-count: infinite;
+animation-duration: 5s;    
+animation-delay: 3s;
+animation-direction:alternate;    
+}
+@keyframes flowers {   
+0% { opacity: 1; }    
+10% {fill: #E5F507; }
+15% { fill: #F5B507; }
+25% { fill: #F58607;}
+100% { fill: #F56E07; }    
+} 
+
+@keyframes flowers1 {
+0% { opacity: 1; }    
+10% {fill: #FFE5CC; }
+15% { fill: #FFCCCC; }
+25% { fill: #FF9999;}
+100% { fill: #FF6666; }    
+} 
+
+@keyframes flowerscenter {
+0% { opacity: 1; }    
+10% {fill: #07D5F5; }
+15% { fill: #07F5ED; }
+25% { fill: #EB9744;}
+100% { fill: #F7A655; }    
+}
+
+.eyes{
+animation-name: eyesmove;
+animation-iteration-count: infinite;
+animation-duration: 3s;
+animation-direction:alternate;    
+}
+
+@keyframes eyesmove {
+0% {transform: translateY(18px);}   
+}
+
+.wingr{
+animation-name: wingr; 
+animation-iteration-count: infinite;
+animation-duration: 3s;
+animation-direction:alternate;    
+}
+.wingl{
+animation-name:wingl;
+animation-iteration-count: infinite; 
+animation-duration: 3s; 
+animation-direction:alternate;    
+}
+
+@keyframes wingl {
+0%{ transform: translateX(10px);}   
+}
+@keyframes wingr {
+0%{ transform: translateX(-10px);}      
+}

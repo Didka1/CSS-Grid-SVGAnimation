@@ -1,0 +1,173 @@
+/* Border box declaration */ 
+html {
+box-sizing: border-box;
+}     
+ *,
+ *:before,
+ *:after {
+box-sizing: inherit;
+}
+body{
+font-family: 'Lateef', cursive;
+font-size: 1.6em;    
+}
+div img {
+width: 100%;
+max-width: 350px;
+}
+
+/* Flexbox */
+.container{
+display: flex;
+flex-flow: wrap;   
+flex: 0 1 auto;    
+margin: 0 auto;
+}
+header {
+flex-direction: row; 
+flex: 0 0 100%;     
+background: url(pictures/candle.jpg) no-repeat;
+}
+header a {
+text-decoration: none;
+color: white;
+background-color: #E0CAA5;
+opacity: 0.8;
+filter: alpha(opacity=60);
+border-radius: 0.313em; 
+margin-left: 1em; 
+}
+/*navigation styles */
+nav{
+ flex: 0 0 100%;       
+}
+nav ul{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;    
+background-color:#D4AB66;
+font-family: 'Merienda', cursive;
+font-size: 0.8em;    
+margin: 0em; 
+}
+nav li{    
+list-style-type: none;
+padding: 1em;    
+}
+nav a {
+text-decoration: none;
+background-color: #E0CAA5;
+color: white;
+border-radius: 0.375em;
+padding:0 0.188em 0em 0.188em;        
+}
+nav a:hover{
+color: black;
+}
+/*sidebar styles*/
+aside{
+flex: 0 0 25%;    
+background-color: #E0CAA5;
+padding: 0 1em;    
+}
+aside ul{
+padding-left: 0em; 
+padding-bottom: 0.5em;    
+}
+aside li{
+list-style-type: none;
+margin-bottom: 1em;     
+background-color: #D4AB66; 
+}
+aside a{
+text-decoration: none;   
+color: black;
+}
+aside a:hover{
+color: white;    
+}
+/* main content*/
+.mainpart{ 
+display: flex;    
+flex-grow: 1;
+flex-direction: row;
+flex-wrap: wrap;
+flex: 0 0 75%;      
+}
+.item1,
+.item2,
+.item3,
+.item4
+{
+flex: 0 0 50%;    
+padding: 0 1em;
+}
+footer{
+flex-direction: column;
+flex: 0 0 100%; 
+background-color:#D4AB66;
+font-family: 'Merienda', cursive;
+font-size: 0.9em;      
+}
+footer p{
+display: flex;
+flex-direction: column;
+flex-flow: row wrap;    
+justify-content:center;    
+}
+/* my grid system */
+
+@media (max-width: 702px) {
+.container{ 
+display: flex;    
+flex-grow: 1;
+flex-direction: column;
+flex-wrap:nowrap;  
+flex: 0 1 auto;    
+margin: 0 auto;    
+}    
+header {
+background: url(pictures/candle780.jpg) no-repeat;
+}
+header h1 {
+padding: 0.3em;
+font-size: 1em
+}    
+nav ul{ 
+background-color:#D4AB66;
+font-family: 'Merienda', cursive;
+font-size: 0.7em;    
+margin: 0em; 
+}  
+nav li{
+display: flex;
+flex-direction: column;
+flex: 0 0 100%;         
+}    
+/* grid reordering with media queries */    
+aside{
+flex-basis: 100%;
+order: 2;   
+    }
+.item1,
+.item2,
+.item3,
+.item4,
+    img
+{
+flex-basis: 100%;
+text-align: justify;    
+order: 1;
+}
+footer{
+flex-direction: row;       
+order: 3;       
+}    
+footer p{ 
+display: flex;
+flex-direction: column;
+flex-flow: nowrap;    
+justify-content:center;  
+}
+}
+
