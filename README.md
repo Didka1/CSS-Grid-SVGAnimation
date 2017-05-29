@@ -2,8 +2,7 @@
 ## Links to the web pages:
 * http://magicbooks.free.bg/index.html - Link to the Flexbox web page;
 * http://magicbooks.free.bg/index_grid.html  - Link to the CSS Grids
-*  - Travel;
-* - Sign in;
+
 
 ## What is the goal of the project?
 The goal is to work more with CSS. Practice same popular things like: Transforms, Filters, Transitions SVG and CSS animation and learn more about CSS Grid and Flexbox.
@@ -39,5 +38,5 @@ The goal is to work more with CSS. Practice same popular things like: Transforms
 
 
 ## External resources:
-*pictures: http://www.freeimages.com/
-*Mondrian painting - original
+* pictures: http://www.freeimages.com/
+* Mondrian painting - original
