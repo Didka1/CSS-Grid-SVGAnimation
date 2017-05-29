@@ -33,7 +33,7 @@ The goal is to work more with CSS. Practice same popular things like: Transforms
 *  Animation, row: 344-421;
 
 # And more
-*I created my own Mondrian painting with CSS Grid.        http://magicbooks.free.bg/index_painting.html 
+* I created my own Mondrian painting with CSS Grid:         http://magicbooks.free.bg/index_painting.html 
 
 
 
