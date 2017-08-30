@@ -5,10 +5,10 @@ The goal is to work more with CSS. Practice same popular things like: Transforms
 
 ## Details
 
- * Flexbox portion of the assignment, row: 19-172
+ * Flexbox portion, row: 19-172
  * Grid reordering, row: 147-172
  
- * CSS Grids assignment 
+ * CSS Grids
  * Layout reordering, row: 204-224;
  * Flexbox is occurring inside of Grid layout, row: 59-68, 154-160, 188-192, 258-264
  
